@@ -29,7 +29,7 @@
         public static int[,] MultMatrix(int[,] matrixOne, int[,] matrixTwo) {
             int row1 = matrixOne.GetLength(0);
             int col1 = matrixOne.GetLength(1);
-            int row2 = matrixTwo.GetLength(0);
+            // int row2 = matrixTwo.GetLength(0);
             int col2 = matrixTwo.GetLength(1);
 
             int[,] resultMatrix = new int[row1, col2];
