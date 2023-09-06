@@ -53,23 +53,6 @@ namespace Assignment_1
             int[,] matrix3 = Matrix.CreateMatrix(rowNumb3, colNumb3, rand);
             int[,] matrix4 = Matrix.CreateMatrix(rowNumb4, colNumb4, rand);
 
-            Console.WriteLine("This is result of matrix SUM:");
-            for (int i = 0; i < matrix3.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix3.GetLength(1); j++)
-                    Console.Write("{0,5}", matrix3[i, j]);
-
-                Console.WriteLine();
-            }
-            Console.WriteLine("This is result of matrix SUM:");
-            for (int i = 0; i < matrix4.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix4.GetLength(1); j++)
-                    Console.Write("{0,5}", matrix4[i, j]);
-
-                Console.WriteLine();
-            }
-
             //performing the multiplication operation
             int[,] multResult = CalculateMatrix.MultMatrix(matrix3, matrix4);
 
