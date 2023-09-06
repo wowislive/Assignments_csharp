@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Assignment_1
 {
@@ -20,29 +20,18 @@ namespace Assignment_1
             int[,] matrix1 = Matrix.CreateMatrix(rowNumb1, colNumb1, rand);
             int[,] matrix2 = Matrix.CreateMatrix(rowNumb2, colNumb2, rand);
 
+            Matrix.PrintMatrix("This is matrix1:", matrix1);
+            Matrix.PrintMatrix("This is matrix2:", matrix2);
+
             //performing the addition operation
             int[,] sumResult = CalculateMatrix.SumMatrix(matrix1, matrix2);
 
-            Console.WriteLine("This is result of matrix SUM:");
-            for (int i = 0; i < rowNumb1; i++)
-            {
-                for (int j = 0; j < colNumb1; j++)
-                    Console.Write("{0,5}", sumResult[i, j]);
-
-                Console.WriteLine();
-            }
+            Matrix.PrintMatrix("This is result of matrix SUM:", sumResult);
 
             //performing the subtraction operation
             int[,] subResult = CalculateMatrix.SubMatrix(matrix1, matrix2);
 
-            Console.WriteLine("This is result of matrix SUB:");
-            for (int i = 0; i < rowNumb1; i++)
-            {
-                for (int j = 0; j < colNumb1; j++)
-                    Console.Write("{0,5}", subResult[i, j]);
-
-                Console.WriteLine();
-            }
+            Matrix.PrintMatrix("This is result of matrix SUB:", subResult);
 
             //To multiply matrices 3 and 4, the number of columns in matrix 3 must be equal to the number of rows in matrix 4
             int rowNumb3 = rand.Next(2, 10);
@@ -53,17 +42,13 @@ namespace Assignment_1
             int[,] matrix3 = Matrix.CreateMatrix(rowNumb3, colNumb3, rand);
             int[,] matrix4 = Matrix.CreateMatrix(rowNumb4, colNumb4, rand);
 
+            Matrix.PrintMatrix("This is matrix3:", matrix3);
+            Matrix.PrintMatrix("This is matrix4:", matrix4);
+
             //performing the multiplication operation
             int[,] multResult = CalculateMatrix.MultMatrix(matrix3, matrix4);
 
-            Console.WriteLine("This is result of matrix MULT:");
-            for (int i = 0; i < multResult.GetLength(0); i++)
-            {
-                for (int j = 0; j < multResult.GetLength(1); j++)
-                    Console.Write("{0,7}", multResult[i, j]);
-
-                Console.WriteLine();
-            }
+            Matrix.PrintMatrix("This is result of matrix MULT:", multResult);
         }
     }
 }
