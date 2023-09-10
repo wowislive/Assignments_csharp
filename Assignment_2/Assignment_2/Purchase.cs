@@ -9,7 +9,8 @@ namespace Assignment_2
         int purchaseId;
         int amount;
 
-        public Purchase(string shopName, int purchaseId, int amount) { 
+        public Purchase(string shopName, int purchaseId, int amount)
+        { 
             purchaseDate = DateTime.Now;
             this.shopName = shopName;
             this.purchaseId = purchaseId;
@@ -25,7 +26,8 @@ namespace Assignment_2
 
         public override string ToString()
         {
-            return purchaseDate + " " + shopName + " " + purchaseId + " " + amount;
+            return "Date: " + purchaseDate + Environment.NewLine + "Shop name: " + shopName + 
+                Environment.NewLine + "Purchase ID: #" + purchaseId + Environment.NewLine + "Amount: " + amount;
         }
     }
 }

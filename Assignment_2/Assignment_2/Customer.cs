@@ -1,4 +1,6 @@
-﻿namespace Assignment_2
+﻿using System;
+
+namespace Assignment_2
 {
     class Customer
     {
@@ -7,7 +9,8 @@
         int purchaseId;
         static int nextId = 1;
 
-        public Customer(string name, int purchaseId) { 
+        public Customer(string name, int purchaseId) 
+        { 
             this.name = name;
             this.purchaseId = purchaseId;
             customerId = nextId;
@@ -25,7 +28,7 @@
 
         public override string ToString()
         {
-            return customerId + " " + name;
+            return "Customer ID: #" + customerId + Environment.NewLine + "Name: " + name;
         }
     }
 }
