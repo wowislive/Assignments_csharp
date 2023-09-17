@@ -7,14 +7,14 @@ namespace Assignment_2
         DateTime purchaseDate;
         string shopName;
         int purchaseId;
-        int amount;
+        string[,] itemAndAmount;
 
-        public Purchase(string shopName, int purchaseId, int amount)
-        { 
+        public Purchase(string shopName, int purchaseId, string[,] itemAndAmount)
+        {
             purchaseDate = DateTime.Now;
             this.shopName = shopName;
             this.purchaseId = purchaseId;
-            this.amount = amount;
+            this.itemAndAmount = itemAndAmount;
         }
 
         public bool PurchaseFound(int purchaseId)
@@ -26,8 +26,20 @@ namespace Assignment_2
 
         public override string ToString()
         {
-            return "Date: " + purchaseDate + Environment.NewLine + "Shop name: " + shopName + 
-                Environment.NewLine + "Purchase ID: #" + purchaseId + Environment.NewLine + "Amount: " + amount;
+            string fullString = "Date: " + purchaseDate +
+                Environment.NewLine + "Shop name: " + shopName +
+                Environment.NewLine + "Purchase ID: #" + purchaseId + Environment.NewLine;
+
+            for (int i = 0; i < itemAndAmount.GetLength(0); i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    fullString += " " + itemAndAmount[i, j];
+                }
+                fullString += Environment.NewLine;
+            }
+
+            return fullString;
         }
     }
 }

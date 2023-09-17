@@ -22,7 +22,7 @@ namespace Assignment_2
                 if (customers[i].CustomerFound(name))
                 {
                     isFound = true;
-                    result.AppendLine("Customer with name " + name + " found." + Environment.NewLine + customers[i].ToString() + 
+                    result.AppendLine("Customer with name " + name + " found." + Environment.NewLine + customers[i].ToString() +
                         Environment.NewLine + purchases[i].ToString());
                 }
             }
@@ -40,7 +40,7 @@ namespace Assignment_2
                 if (purchases[i].PurchaseFound(purchaseId))
                 {
                     isFound = true;
-                    result.AppendLine("Purchase with ID " + purchaseId + " found." + Environment.NewLine + customers[i].ToString() + 
+                    result.AppendLine("Purchase with ID " + purchaseId + " found." + Environment.NewLine + customers[i].ToString() +
                         Environment.NewLine + purchases[i].ToString());
                 }
             }

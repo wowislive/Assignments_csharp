@@ -6,18 +6,16 @@ namespace Assignment_2
     {
         string name;
         int customerId;
-        int purchaseId;
+        int[] purchaseIds;
         static int nextId = 1;
 
-        public Customer(string name, int purchaseId) 
-        { 
+        public Customer(string name, int[] purchaseIds)
+        {
             this.name = name;
-            this.purchaseId = purchaseId;
+            this.purchaseIds = purchaseIds;
             customerId = nextId;
             nextId++;
         }
-
-        public int GetPurchaseId() { return purchaseId;}
 
         public bool CustomerFound(string name)
         {
