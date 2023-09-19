@@ -23,7 +23,7 @@ namespace Assignment_2
                 return true;
             return false;
         }
-
+        
         public override string ToString()
         {
             string fullString = "Date: " + purchaseDate +

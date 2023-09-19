@@ -17,6 +17,16 @@ namespace Assignment_2
             nextId++;
         }
 
+        public int[] PurchaseIds { get => purchaseIds;}
+
+        public bool PurchaseIdFound(int purchaseId)
+        {
+            for (int i = 0; i < purchaseIds.Length; i++)
+                if (purchaseIds[i] == purchaseId) return true;
+            
+            return false;
+        }
+
         public bool CustomerFound(string name)
         {
             if (this.name.Equals(name))
