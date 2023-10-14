@@ -6,8 +6,8 @@ namespace Assignment_4
 {
     internal class AirlineCompany
     {
-        string airlineName;
-        SortedList<Flight, double> airlines = new SortedList<Flight, double>();
+        readonly string airlineName;
+        readonly SortedList<Flight, double> airlines = new SortedList<Flight, double>();
 
         public AirlineCompany(string name)
         {
